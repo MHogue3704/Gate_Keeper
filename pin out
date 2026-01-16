@@ -1,0 +1,42 @@
+	IO15	LCD screen selection control signal, low level effective
+IO2	LCD command/data selection control signal
+High Level:data,low Level:command
+
+IO14	SPI bus clock signal(shared by LCD and touch screen)
+IO13	SPI bus write data signal(shared by LCD and touch screen)
+IO12	SPI bus read data signal(shared by LCD and touch screen)
+EN	LCD reset control signal, low level reset(share reset pin with ESP32-32E master)
+IO27	LCD backlight control signal(high level backlight on, low level backlight off)
+Resistive Touch Screen	IO14	SPI bus clock signal(shared by touch screen and LCD)
+IO13	SPI bus write data signal(touch screen and LCD screen shared)
+IO12	SPI bus read data signal(shared by touch screen and LCD screen)
+IO33	Resistive touch screen chip selection control signal,low level effective
+IO36	Resistive touch screen touch interrupt signal,generates touch when input low level to master
+RGB Three-color Light	IO22	Red LED light(common anode, low level on, high level off)
+IO16	Green LED light(common anode, low level on, high level off)
+IO17	Blue LED light(common anode, low level on, high level off)
+MicroSD 卡	IO5	SD card select signal,low level effective
+IO23	SD card SPI bus write data signal(shared by MicroSD card and SPI peripheral)
+IO18	SD card SPI bus clock signal(shared by MicroSD card and SPI peripheral)
+IO19	SD card SPI bus read data signal(shared by MicroSD card and SPI peripheral)
+Audio	IO4	Audio enable signal,low level enable,high level disable
+IO26	Audio signal DAC output signal
+KEY	IO0	Download mode Select button(Press and hold the button to power on, then release to enter download mode)
+EN	ESP32-23E reset button, low level reset(shared with LCD reset)
+Serial Port	RXD0(IO3)	ESP32-32E serial port receiving signal(if the serial port is not used, it can be used as ordinary IO)
+TXD0(IO1)	ESP32-32E serial port sends signals(if the serial port is not used, it can be used as ordinary IO)
+Battery	IO34	Battery voltage ADC value Get Signal (input)
+SPI Peripheral	IO21	SPI peripheral chip selection signal, low level effective(if the SPI device is not used, it can be used for ordinary IO)
+IO18	SPI bus clock pin for SPI peripherals
+(SPI peripherals are shared with MicroSD cards, if SPI devices or SD cards are not used, ordinary IO can be used)
+
+IO19	The SPI bus read data pin of the SPI peripheral
+(SPI peripherals are shared with MicroSD cards, if SPI devices or SD cards are not used, ordinary IO can be used)
+
+IO23	The SPI bus of the SPI peripheral writes data pins
+(SPI peripherals are shared with MicroSD cards, if SPI devices or SD cards are not used, ordinary IO can be used)
+
+I2C Peripheral	IO25	I2C bus clock pin for I2C peripherals (can be used as normal IO if I2C device is not used)
+IO32	I2C bus data pins for I2C peripherals (can be used for ordinary IO if I2C devices are not used)
+NC	IO35	It can only be used as input IO
+IO39

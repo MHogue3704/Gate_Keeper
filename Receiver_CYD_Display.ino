@@ -5,8 +5,8 @@
 #include <TFT_eSPI.h> 
 
 // --- CONFIGURATION ---
-const char* ssid = "YOUR_WIFI_NAME";
-const char* password = "YOUR_WIFI_PASSWORD";
+const char* ssid = "FHogue";
+const char* password = "fdigger1";
 const int UDP_PORT = 4210;
 
 // Location for Weather
